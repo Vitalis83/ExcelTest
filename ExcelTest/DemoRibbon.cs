@@ -1,10 +1,12 @@
-﻿using Microsoft.Office.Tools.Ribbon;
+﻿using ExcelTest.ExcelObj;
+using Microsoft.Office.Tools.Ribbon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using WindowsFormsApp1;
+
 
 namespace ExcelTest
 {
@@ -25,11 +27,14 @@ namespace ExcelTest
         private void DemoButton2_Click(object sender, RibbonControlEventArgs e)
         {
             MessageBox.Show("Button2");
+            var excelCom = new ExcelCommands(Globals.ThisAddIn.Application);
+            excelCom.CompareRangeUsage();
+
         }
 
         private void DemoButton3_Click(object sender, RibbonControlEventArgs e)
         {
-            MessageBox.Show("Button3");
+            
         }
     }
 }

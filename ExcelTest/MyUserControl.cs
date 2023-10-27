@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ExcelTest
 {
-    public partial class UserControl1 : UserControl
+    public partial class MyUserControl : UserControl
     {
-        public UserControl1()
+        public MyUserControl()
         {
             InitializeComponent();
         }
